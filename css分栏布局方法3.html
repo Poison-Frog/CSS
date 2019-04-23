@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		section {
+    		position: relative;
+    		height: 200px;
+		}
+		.left {
+    		width: 200px;
+    		background-color: red;
+    		left: 0;
+    		height: 100%;
+    		position: absolute;
+		}
+		.content {
+    		background-color: yellow;
+    		left: 200px;
+    		right: 200px;
+    		height: 100%;
+    		position: absolute;
+		}
+		.right {
+    		width: 200px;
+    		background-color: green;
+    		right: 0;
+    		height: 100%;
+    		position: absolute;
+		}
+	</style>
+</head>
+<body>
+	<section class="box">
+    		<div class="left"></div>
+    		<div class="content"></div>
+    		<div class="right"></div>
+	</section>
+</body>
+</html>
