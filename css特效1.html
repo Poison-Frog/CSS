@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.blur{
+          position: absolute;
+          top: 50%;left: 50%;
+          width: 300px;line-height:160px;
+          transform: translate(-50%, -50%);
+          border-radius:10px;
+          overflow:hidden;
+          background:#E91E63;
+          color:#fff;
+          font-size:200%;
+          text-align:center;
+          cursor:pointer;
+          transition: transform .2s;
+        }
+        .blur:hover{
+          box-shadow:0 0 0 1920px rgba(0,0,0,.7);
+          transform: translate(-50%, -50%) scale(1.2);
+        }
+	</style>
+</head>
+<body>
+	<section class="blur">
+		<h1>.blur</h1>
+	</section>
+</body>
+</html>
