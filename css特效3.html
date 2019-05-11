@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.mix{
+          position: absolute;
+          top: 50%;left: 50%;
+          transform: translate(-50%, -50%);
+          width: 300px;height: 200px;
+          -webkit-filter:contrast(20);
+          background:#fff;
+        }
+        .mix:before{
+          content:"";
+          position: absolute;
+          width:120px;
+          height:120px;
+          border-radius: 50%;
+          background:#333;
+          top:40px;
+          left:0px;
+          z-index:2;
+          -webkit-filter:blur(6px);
+          box-sizing:border-box;
+          animation:Move 10s ease-out infinite;
+          -webkit-animation:Move 10s ease-out infinite;
+        }
+        .mix:after{
+          content:"";
+          position: absolute;
+          width:80px;
+          height:80px;
+          border-radius: 50%;
+          background:#3F51B5;
+          top:60px;
+          right:0px;
+          z-index:2;
+          -webkit-filter:blur(6px);
+          animation:Move2 10s ease-out infinite;
+          -webkit-animation:Move2 10s ease-out infinite;
+
+        }
+
+        @keyframes Move{
+          50%{
+            left:200px;
+          }
+        }
+
+        @-webkit-keyframes Move{
+          50%{
+            left:200px;
+          }
+        }
+
+        @keyframes Move2{
+          50%{
+            right:200px;
+          }
+        }
+
+        @-webkit-keyframes Move2{
+          50%{
+            right:200px;
+          }
+        }
+	</style>
+</head>
+<body>
+	<section class="mix"></section>
+</body>
+</html>
