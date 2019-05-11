@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		 .color{
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          -webkit-transform: translate(-50%, -50%);
+                  transform: translate(-50%, -50%);
+          width: 400px;
+          line-height: 200px;
+          text-align: center;
+          color: #fff;
+          font-size: 200%;
+          border-radius: .5em;
+          background: linear-gradient(limegreen, transparent), linear-gradient(90deg, skyblue, transparent), linear-gradient(-90deg, coral, transparent);
+          background-blend-mode: screen;
+          -webkit-animation: colorChange 5s infinite alternate linear;
+                  animation: colorChange 5s infinite alternate linear;
+        }
+        @-webkit-keyframes colorChange {
+          100% {
+            -webkit-filter: hue-rotate(360deg);
+                    filter: hue-rotate(360deg);
+          }
+        }
+        @keyframes colorChange {
+          100% {
+            -webkit-filter: hue-rotate(360deg);
+                    filter: hue-rotate(360deg);
+          }
+        }
+	</style>
+</head>
+<body>
+	<section class="color">
+		<h1>.color</h1>
+	</section>
+</body>
+</html>
