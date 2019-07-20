@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		section{
+			width: 102px;
+			height: 102px;
+			margin:10px;
+			float:left;
+			background-color: #f3f5f7;
+			border: 5px solid gray;
+			position: relative;
+		}
+		.text{
+			width:30px;
+			height:30px;
+			position: absolute;
+			top:50%;
+			left:50%;
+			margin-top:-15px;
+			margin-left:-15px;
+			font-size:20px;
+			font-weight:bold;
+			text-align: center;
+			line-height: 30px;
+		}
+		.item{
+			width:34px;
+			height:34px;
+			border-radius: 50%;
+			background-color: red;
+		}
+		.one{
+			display:flex;
+		}
+		.two{
+			display:flex;
+			justify-content: center;
+		}
+		.three{
+			display: flex;
+			justify-content: flex-end;
+		}
+		.four{
+			display: flex;
+			align-items: center;
+		}
+		.five{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.six{
+			display:flex;
+			justify-content: center;
+			align-items: flex-end;
+		}
+		.seven{
+			display: flex;
+			justify-content: flex-end;
+			align-items: flex-end;
+		}
+		.eight{
+			display: flex;
+			justify-content: space-between;
+		}
+		.nine{
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+		}
+		.ten{
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			align-items: center;
+		}
+		.eleven{
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			align-items: flex-end;
+		}
+		.twelve{
+			display: flex;
+		}
+		.twelve > .item:nth-child(2){
+			align-self: center;
+		}
+		.thirteen{
+			display:flex;
+			justify-content: space-between;
+		}
+		.thirteen > .item:nth-child(2){
+			align-self: flex-end;
+		}
+		.fourteen{
+			display: flex;
+		}
+		.fourteen > .item:nth-child(2){
+			align-self: center;
+		}
+		.fourteen > .item:nth-child(3){
+			align-self: flex-end;
+		}
+		.fifteen{
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: flex-end;
+			align-content: space-between;
+		}
+		.sixteen{
+			display: flex;
+			flex-wrap: wrap;
+			align-content: space-between;
+		}
+		.sixteen > .column{
+			flex-basis: 100%;
+			display: flex;
+			justify-content: space-between;
+		}
+		.seventeen{
+			display: flex;
+			flex-wrap: wrap;
+			align-content: space-between;
+		}
+		.eighteen{
+			display: flex;
+			flex-direction: column;
+			flex-wrap: wrap;
+			align-content: space-between;
+		}
+		.ninteen{
+			display:flex;
+			flex-wrap: wrap;
+		}
+		.ninteen > .row{
+			flex-basis: 100%;
+			display: flex;
+		}
+		.ninteen > .row:nth-child(2){
+			justify-content: center;
+		}
+		.ninteen > .row:nth-child(3){
+			justify-content: space-between;
+		}
+		.twenty{
+			display: flex;
+			flex-wrap: wrap;
+		}
+	</style>
+</head>
+<body>
+	<section class="one">
+		<!-- flex默认值为flex-start -->
+		<div class="item"></div>
+		<div class="text">1</div>
+	</section>
+	<section class="two">
+		<!-- 设置为对齐居中 -->
+		<div class="item"></div>
+		<div class="text">2</div>
+	</section>
+	<section class="three">
+		<!-- 设置为右对齐 -->
+		<div class="item"></div>
+		<div class="text">3</div>
+	</section>
+	<section class="four">
+		<!-- 设置为垂直方向居中 -->
+		<div class="item"></div>
+		<div class="text">4</div>
+	</section>
+	<section class="five">
+		<!-- 设置为水平垂直居中 -->
+		<div class="item"></div>
+		<div class="text">5</div>
+	</section>
+	<section class="six">
+		<!-- 设置为水平居中垂直到底 -->
+		<div class="item"></div>
+		<div class="text">6</div>
+	</section>
+	<section class="seven">
+		<!-- 设置为水平右对齐垂直到底 -->
+		<div class="item"></div>
+		<div class="text">7</div>
+	</section>
+	<section class="eight">
+		<!-- 双项目设置为两端对齐 -->
+		<div class="item"></div>
+		<div class="item"></div>
+		<div class="text">8</div>
+	</section>
+	<section class="nine">
+		<!-- 双项目改变对齐方向，并设置为两端对齐 -->
+		<div class="item"></div>
+		<div class="item"></div>
+		<div class="text">9</div>
+	</section>
+	<section class="ten">
+		<!-- 双项目改变对齐方向，两端对齐的同时，交叉轴方向居中 -->
+		<div class="item"></div>
+		<div class="item"></div>
+		<div class="text">10</div>
+	</section>
+	<section class="eleven">
+		<!-- 双项目改变对齐方向，两端对齐的同时，交叉轴方向到头 -->
+		<div class="item"></div>
+		<div class="item"></div>
+		<div class="text">11</div>
+	</section>
+	<section class="twelve">
+		<!-- 双项目，默认为第一行第二行左对齐，用align-self改变子元素覆盖默认父元素的align-items -->
+		<div class="item"></div>
+		<div class="item"></div>
+		<div class="text">12</div>
+	</section>
+	<section class="thirteen">
+		<!-- 双项目，用两端对齐方式，并用align-self使第二个项目垂直到底 -->
+		<div class="item"></div>
+		<div class="item"></div>
+		<div class="text">13</div>
+	</section>
+	<section class="fourteen">
+		<!-- 同12，三项目利用align-self改变子元素 -->
+		<div class="item"></div>
+		<div class="item"></div>
+		<div class="item"></div>
+		<div class="text">14</div>
+	</section>
+	<section class="fifteen">
+		<!-- 四项目，由于父元素只能装下三个小球，所以利用flex-wrap来进行换行，并使第二行右对齐，垂直方向与第一行两端对齐 -->
+		<div class="item"></div>
+		<div class="item"></div>
+		<div class="item"></div>
+		<div class="item"></div>
+		<div class="text">15</div>
+	</section>
+	<section class="sixteen">
+		<!-- 四项目，利用flex-wrap给column换行，用align-content使两个column垂直方向两端对齐，再使column中的子元素水平方向两端对齐 -->
+		<div class="column">
+			<div class="item"></div>
+			<div class="item"></div>
+		</div>
+		<div class="column">
+			<div class="item"></div>
+			<div class="item"></div>
+		</div>
+		<div class="text">16</div>
+	</section>
+	<section class="seventeen">
+		<!-- 六项目，同15，利用flex-wrap来换行，并使两行在垂直方向两端对齐 -->
+		<div class="item"></div>
+		<div class="item"></div>
+		<div class="item"></div>
+		<div class="item"></div>
+		<div class="item"></div>
+		<div class="item"></div>
+		<div class="text">17</div>
+	</section>
+	<section class="eighteen">
+		<!-- 六项目，先改变对齐方向再进行换行及其他操作 -->
+		<div class="item"></div>
+		<div class="item"></div>
+		<div class="item"></div>
+		<div class="item"></div>
+		<div class="item"></div>
+		<div class="item"></div>
+		<div class="text">18</div>
+	</section>
+	<section class="ninteen">
+		<!-- 六项目，flex-wrap换成3个row为三行，之后再对row中的子元素进行对齐操作 -->
+		<div class="row">
+			<div class="item"></div>
+			<div class="item"></div>
+			<div class="item"></div>
+		</div>
+		<div class="row">
+			<div class="item"></div>
+		</div>
+		<div class="row">
+			<div class="item"></div>
+			<div class="item"></div>
+		</div>
+		<div class="text">19</div>
+	</section>
+	<section class="twenty">
+		<!-- 九元素，换行直接铺满了父元素 -->
+		<div class="item"></div>
+		<div class="item"></div>
+		<div class="item"></div>
+		<div class="item"></div>
+		<div class="item"></div>
+		<div class="item"></div>
+		<div class="item"></div>
+		<div class="item"></div>
+		<div class="item"></div>
+		<div class="text">20</div>
+	</section>
+</body>
+</html>
