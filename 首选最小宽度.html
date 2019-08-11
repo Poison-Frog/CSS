@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.ao,
+		.tu{
+			display:inline-block;
+			width: 0;
+			font-size: 14px;
+			line-height: 18px;
+			margin: 60px;
+			color:#000;
+		}
+		.ao:before,
+		.tu:before{
+			outline: 2px solid #000;
+			font-family: Consolas,Monaco,monmospace;
+		}
+		.ao:before{
+			content:"concave凹concave";
+		}
+		.tu{
+			direction: rtl;
+		}
+		.tu:before{
+			content:"凸convex凸";
+		}
+	</style>
+</head>
+<body>
+	<span class="ao"></span>
+	<span class="tu"></span>
+</body>
+</html>
