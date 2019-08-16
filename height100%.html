@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		html,body{
+			height:100%;
+		}
+		.box{
+			height: 160px;
+			padding: 30px;
+			box-sizing: border-box;
+			margin-bottom:10px;
+			background-color: #beceeb;
+		}
+		.child{
+			height: 100%;
+			background-color: #cd0000;
+			text-align: center;
+			line-height: 100px;
+			color:#fff;
+		}
+		.rel{
+			position: relative;
+		}
+		.rel > .child{
+			width:100%;
+			position: absolute;
+			line-height: 160px;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<!-- border-box,padding计算宽度，160-30×2=100px -->
+		<div class="child">高度100px</div>
+	</div>
+	<div class="box rel">
+		<div class="child">高度160px</div>
+	</div>
+</body>
+</html>
